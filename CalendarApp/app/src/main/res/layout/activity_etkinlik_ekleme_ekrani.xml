@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/etkinlik_ekleme_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EtkinlikEklemeEkrani">
+
+    <TextView
+        android:id="@+id/textView_etkinlik_tipi_yazisi"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Etkinlik Tipi :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerEtkinlikTipi"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView_etkinlik_tipi_yazisi"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_etkinlik_adi_yazisi"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Etkinlik Adı :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_etkinlik_tipi_yazisi" />
+
+    <EditText
+        android:id="@+id/editText_etkinlik_adi"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Etkinlik Adı"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_etkinlik_adi_yazisi"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEtkinlikTipi" />
+
+    <TextView
+        android:id="@+id/textView_etkinlik_detayi_yazisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Etkinlik Detayı :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_etkinlik_adi_yazisi" />
+
+    <EditText
+        android:id="@+id/editText_etkinlik_detayi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Etkinlik Detayı"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_etkinlik_detayi_yazisi" />
+
+
+    <TextView
+        android:id="@+id/textView_etkinlik_baslangic_tarihi"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Başlangıç Tarihi :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_etkinlik_detayi" />
+
+    <Button
+        android:id="@+id/button_etkinlik_baslangic_tarihi"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="10dp"
+        android:text="__ / __ / __"
+        app:layout_constraintLeft_toRightOf="@id/textView_etkinlik_baslangic_tarihi"
+        app:layout_constraintTop_toBottomOf="@+id/editText_etkinlik_detayi" />
+
+    <TextView
+        android:id="@+id/textView_etkinlik_bitis_tarihi"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Bitiş Tarihi :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_etkinlik_baslangic_tarihi" />
+
+    <Button
+        android:id="@+id/button_etkinlik_bitis_tarihi"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="5dp"
+        android:text="__ / __ / __"
+        app:layout_constraintLeft_toRightOf="@id/textView_etkinlik_bitis_tarihi"
+        app:layout_constraintTop_toBottomOf="@+id/button_etkinlik_baslangic_tarihi" />
+
+    <Button
+        android:id="@+id/button_etkinlik_hatirlatma_zamanlari"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="5dp"
+        android:text="Hatırlatma Zamanları"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonEtkinlikAdresiEkle"
+        app:layout_constraintTop_toBottomOf="@+id/button_etkinlik_bitis_tarihi" />
+
+    <Button
+        android:id="@+id/buttonEtkinlikAdresiEkle"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Adres Ekle"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_etkinlik_bitis_tarihi" />
+
+    <EditText
+        android:id="@+id/editText_etkinlik_adresi"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Etkinlik Adresi"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonAdresGoster"
+        app:layout_constraintTop_toBottomOf="@+id/button_etkinlik_hatirlatma_zamanlari" />
+
+    <Button
+        android:id="@+id/buttonAdresGoster"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:text="Adres Goster"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEtkinlikAdresiEkle" />
+
+    <Button
+        android:id="@+id/buttonEtkinlikEkle"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:text="Tamam"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdresGoster" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

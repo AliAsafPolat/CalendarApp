@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/yaklasan_etkinlik_layout"
+    tools:context=".YaklasanEtkinlikGostermeEkrani">
+
+    <TextView
+        android:id="@+id/textViewYaklasanEtkinlikTarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textColor="#C41717"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGunlukGosterim"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="Günlük"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYaklasanEtkinlikTarih" />
+
+    <Button
+        android:id="@+id/buttonHaftalikGosterim"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:text="Haftalık"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonGunlukGosterim"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYaklasanEtkinlikTarih" />
+
+    <Button
+        android:id="@+id/buttonAylikGosterim"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:text="Aylık"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonHaftalikGosterim"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYaklasanEtkinlikTarih" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewYaklasanEtkinlikler"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHaftalikGosterim" />
+
+    <Button
+        android:id="@+id/buttonYaklasanEtkinliklerTamam"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Tamam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewYaklasanEtkinlikler" />
+</androidx.constraintlayout.widget.ConstraintLayout>

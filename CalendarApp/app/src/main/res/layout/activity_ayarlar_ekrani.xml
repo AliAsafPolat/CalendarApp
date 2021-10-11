@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ayarlarEkraniLayout"
+    tools:context=".AyarlarEkrani">
+
+    <TextView
+        android:id="@+id/textViewVarsayilanRingTone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Varsayılan Zil Sesi"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewVarsayilanHatirlatmaZamani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:text="Varsayılan Hatırlatma Zamanı"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerVarsayilanRingtone" />
+
+    <TextView
+        android:id="@+id/textViewVarsayilanHatirlatmaSikligi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Varsayılan Hatırlatma Sıklığı"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVarsayilanHatirlatmaSaati" />
+
+    <Spinner
+        android:id="@+id/spinnerVarsayilanRingtone"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVarsayilanRingTone" />
+
+    <Spinner
+        android:id="@+id/spinnerVarsayilanHatirlatmaZamani"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVarsayilanHatirlatmaZamani" />
+
+    <Spinner
+        android:id="@+id/spinnerVarsayilanHatirlatmaSikligi"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVarsayilanHatirlatmaSikligi" />
+
+    <Switch
+        android:id="@+id/switchDarkLightMode"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Dark/Light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerVarsayilanHatirlatmaSikligi" />
+
+    <Button
+        android:id="@+id/buttonVarsayilanAyarlarKaydet"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="28dp"
+        android:text="Kaydet"
+        app:layout_constraintStart_toEndOf="@+id/switchDarkLightMode"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerVarsayilanHatirlatmaSikligi" />
+
+    <TextView
+        android:id="@+id/textViewVarsayilanHatirlatmaSaati"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text="Varsayilan Hatirlatma Saati"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerVarsayilanHatirlatmaZamani" />
+
+    <Button
+        android:id="@+id/buttonVarsayilanHatirlatmaSaati"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Saat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVarsayilanHatirlatmaSaati" />
+</androidx.constraintlayout.widget.ConstraintLayout>
